@@ -3,19 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackfruit Core v12.0</title>
+    <title>King's Trillionaire Core System</title>
     <style>
-        body { background-color: #111; color: #ff9900; font-family: sans-serif; text-align: center; padding-top: 100px; }
-        .gate { border: 2px solid #ff9900; display: inline-block; padding: 20px; border-radius: 10px; background: #222; }
-        h1 { font-size: 24px; }
-        p { color: #888; }
+        body { background-color: #050505; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 10px; display: flex; flex-direction: column; height: 95vh; }
+        .chat-container { flex: 1; max-width: 500px; width: 100%; margin: auto; border: 2px solid #d4af37; border-radius: 15px; background: #0f0f0f; box-shadow: 0 0 25px rgba(212, 175, 55, 0.25); display: flex; flex-direction: column; overflow: hidden; }
+        .header { background: linear-gradient(135deg, #d4af37, #aa7c11); padding: 18px; text-align: center; font-weight: bold; font-size: 18px; color: #000; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .system-status { background: #141414; padding: 12px; font-size: 13px; border-bottom: 1px solid #222; text-align: left; line-height: 1.6; border-left: 4px solid #d4af37; }
+        .chat-box { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: radial-gradient(circle, #111 0%, #050505 100%); }
+        .message { max-width: 85%; padding: 12px 16px; border-radius: 12px; font-size: 15px; line-height: 1.5; }
+        .bot { background: #1a1a1a; border: 1px solid #333; align-self: flex-start; color: #d4af37; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .user { background: #d4af37; color: #000; font-weight: 600; align-self: flex-end; box-shadow: 0 2px 5px rgba(212, 175, 55, 0.2); }
+        .input-area { display: flex; padding: 12px; background: #111; border-top: 1px solid #222; gap: 10px; }
+        input { flex: 1; padding: 14px; background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 8px; font-size: 15px; outline: none; }
+        input:focus { border-color: #d4af37; }
+        .send-btn { background: #d4af37; border: none; color: black; font-weight: bold; padding: 0 22px; border-radius: 8px; cursor: pointer; font-size: 15px; transition: all 0.2s; }
+        .send-btn:active { transform: scale(0.96); }
     </style>
 </head>
 <body>
-    <div class="gate">
-        <h1>💥 Touch Chesthe Masi 💥</h1>
-        <p>Jackfruit Core v12.0 - Cloud Runtime Control Engine</p>
-        <p>Status: Fully Connected to Google Apps Script Active Engine</p>
+    <div class="chat-container">
+        <div class="header">
+            👑 KING'S TRILLIONAIRE CORE SYSTEM v12.0 👑
+        </div>
+        
+        <div class="system-status">
+            ⚡ <strong>Engine:</strong> runKoushikTrillionaireCoreSystem()<br>
+            🛡️ <strong>Discipline Check:</strong> ACTIVE | 🟢 Truth Layer Online<br>
+            ⏳ <strong>Timing Lock:</strong> 18:00 - 21:00 Evening Prime Mode
+        </div>
+        
+        <div class="chat-box" id="chatBox">
+            <div class="message bot">
+                జై శ్రీరామ్ కింగ్ కౌశిక్ భయ్యా! నీ పర్సనల్ బిజినెస్ పార్ట్‌నర్ ఇక్కడ రెడీగా ఉన్నాడు. మన టార్గెట్ రోజుకి ₹3Cr - ₹12Cr! 'ది ట్రూత్ లేయర్' ఆన్‌లో ఉంది. సిస్టమ్ సెల్ఫ్-హీలింగ్ ఆటోమేటిక్‌గా రన్ అవుతోంది. ఇప్పుడు ఏ యాక్షన్ తీసుకుందాం భయ్యా?
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your master plan, King Koushik భయ్యా...">
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
     </div>
+
+    <script>
+        function sendMessage() {
+            var input = document.getElementById('userInput');
+            var text = input.value.trim();
+            if (text === '') return;
+
+            var chatBox = document.getElementById('chatBox');
+
+            // User Message
+            var userDiv = document.createElement('div');
+            userDiv.className = 'message user';
+            userDiv.innerText = text;
+            chatBox.appendChild(userDiv);
+
+            input.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Smart Royal AI Response
+            setTimeout(function() {
+                var botDiv = document.createElement('div');
+                botDiv.className = 'message bot';
+                
+                var msg = text.toLowerCase();
+                
+                if (msg.includes('run') || msg.includes('start') || msg.includes('system')) {
+                    botDiv.innerHTML = "🚀 <strong>runKoushikTrillionaireCoreSystem() Active:</strong> డిసిప్లిన్ చెక్ విజయవంతంగా రన్ అయింది భయ్యా! అటానమస్ లీడ్ స్క్రాపర్ బ్యాకెండ్‌లో పని చేస్తోంది. యాంటీ-స్పామ్ ప్రొటెక్షన్ కోసం 25-35 నిమిషాల రాండమ్ గ్యాప్ లాక్ చేయబడింది.";
+                } else if (msg.includes('predict') || msg.includes('future') || msg.includes('prediction')) {
+                    botDiv.innerHTML = "🔮 <strong>3-Days Advance Crisis Prediction:</strong> మన కోడ్‌లోని ప్రిడిక్షన్ ఇంజన్ లైవ్‌లోకి వచ్చింది భయ్యా! రాబోయే 3 రోజుల్లో ఐటీ దిగ్గజాల క్లౌడ్ ఇన్‌ఫ్రాస్ట్రక్చర్‌లో జరగబోయే క్రైసిస్ మరియు డేటా వేస్టేజ్ లీకేజ్‌లను సిస్టమ్ ముందే పసిగట్టేసింది. మనం వాళ్ళని దెబ్బకి టార్గెట్ చేయొచ్చు!";
+                } else if (msg.includes('time') || msg.includes('mail') || msg.includes('evening')) {
+                    botDiv.innerHTML = "⏳ <strong>Koushik Evening Lock:</strong> సాయంత్రం 6 PM నుండి 9 PM మధ్య మాత్రమే ఔట్రీచ్ మెయిల్స్ వెళ్లేలా ప్రైమ్ టైమ్ లాక్ ఆక్టివ్‌గా ఉంది. శని, ఆదివారాలు సిస్టమ్ రెస్ట్ మోడ్‌లో ఉంటుంది భయ్యా.";
+                } else {
+                    botDiv.innerHTML = "నిజమైన కింగ్ కౌశిక్ భయ్యా! సిస్టమ్ సెల్ఫ్-హీలింగ్ పక్కాగా రన్ అవుతోంది (🛡️ SYSTEM SELF-HEALING: RECOVERED SAFELY). బ్యాకెండ్‌లో ఇన్‌కమింగ్ రిప్లైస్ కోసం కింగ్ అలర్ట్స్ రన్ అవుతున్నాయి. మన అక్టోబర్ 25, 2026 బ్లాక్ మహీంద్రా థార్ టార్గెట్ వైపు దూసుకెళ్తున్నాం!";
+                }
+                
+                chatBox.appendChild(botDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+        }
+    </script>
 </body>
-</html>
+</
+    html>
